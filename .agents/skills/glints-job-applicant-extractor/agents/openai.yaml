@@ -1,0 +1,6 @@
+interface:
+  display_name: "Glints Job Applicant Extractor"
+  short_description: "Export Glints applicants from network channel data"
+  default_prompt: "Use $glints-job-applicant-extractor to collect all Glints applicant channel pages and export the verified data to Excel."
+policy:
+  allow_implicit_invocation: true

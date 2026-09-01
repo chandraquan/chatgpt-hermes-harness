@@ -1,0 +1,30 @@
+# Generated exports and temporary build artifacts
+.tmp/
+outputs/
+*.inspect.ndjson
+
+# Machine-local Codex task addresses and live task state
+.hermes/team/ROSTER.md
+.hermes/threads/REGISTRY.md
+
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Editor, operating-system, and Office lock files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# Test and language caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+node_modules/
