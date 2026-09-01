@@ -28,20 +28,6 @@
 - Rationale: the latter persist and can work well, but they are not deterministic
   platform hooks or the native Codex memory engine.
 
-## 2026-09-01 — Use a persistent decentralized task team
-
-- Status: active
-- Decision: the current task is Orchestrator; Researcher, Analyst, Architect,
-  Executor, Reviewer, and Verifier are persistent user-visible Codex tasks using
-  `gpt-5.6-luna` at `high`. They communicate directly with native task messages.
-- Rationale: the user explicitly rejected side-chat orchestration and requested
-  auditable, decentralized cross-thread collaboration.
-- Guardrails: Executor exclusively owns product edits; each role may evolve only
-  its own harness namespace; shared state remains Orchestrator-owned; disputes
-  escalate after two peer rounds; each core role may create at most two surge tasks
-  per work order.
-- Supersedes: the subagent-first orchestration policy in the initial harness.
-
 ## 2026-09-01 — Add a network-first Glints applicant extractor skill
 
 - Status: active
@@ -63,3 +49,38 @@
   runtime task IDs or credentials before push.
 - Evidence: SSH authenticated as `chandraquan`, commit `4bf538d` was pushed to
   `origin/main`, and GitHub exposes the repository publicly.
+
+## 2026-09-01 — Use only the Finday social-media team with complete capability accounting
+
+- Status: active
+- Decision: operate solely through seven user-visible social tasks mapped from
+  `smorchestrator`, `smstrategist`, `smplanner`, `smproducer`, `smreviewer`,
+  `smpublisher`, and `smanalyst`.
+- Model: every social task uses `gpt-5.6-luna` at reasoning effort `high`.
+- Capability contract: account for all 67 logical source skills as `NATIVE`,
+  `ADAPTED`, or `UNAVAILABLE`; never omit a capability or claim unsupported
+  Hermes runtime parity.
+- Boundary: tasks share one project root and are collaborators, not independent
+  `HERMES_HOME` profiles. Do not reproduce profile credentials, state/session
+  databases, gateway/cron storage, Kanban, plugins, or rollback semantics.
+- Privacy: migrate only authored role behavior and sanitized durable Finday
+  preferences; exclude `.env`, auth, raw memory, messages, sessions, DB/WAL/SHM,
+  logs, caches, locks, process state, temporary helpers, and generated snapshots.
+- Evidence: read-only source inventory found 7 profiles, 60 common logical skills
+  physically copied 420 times, plus 4/2/1 unique skills; all cron execution tables
+  contained zero rows.
+
+## 2026-09-01 — Require native GPT Image 2 for static and carousel production
+
+- Status: active
+- Decision: every Finday static post and carousel slide uses only native
+  `gpt-image-2` with a readable Finday logo, approved brand avatar/model, and
+  approved text-to-image prompt. Request 4:5, preserve raw output, and directly
+  resize raster-to-raster without crop to final `1080x1350`.
+- Rationale: explicit user override of the adapted source procedure's former
+  optional-normalization detail. It is a deliberate product workflow decision,
+  not a claim of source-profile parity.
+- Evidence: explicit user instruction relayed in work order
+  `reconcile-shared-raster-and-audit-fixes-v1`.
+- Guardrails: preserve raw/final paths, dimensions, resize operation, checksums,
+  and identity provenance; no alternate model, composition, or production path.

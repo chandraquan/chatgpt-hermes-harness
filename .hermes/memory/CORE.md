@@ -13,8 +13,8 @@
 - Repository-local skills and procedural learning.
 - Durable file-backed project memory across Codex tasks, distinct from the native
   Codex local memory store.
-- Orchestration through six persistent, user-visible Codex specialist tasks with
-  direct cross-task messaging; side-chat subagents are not used for the team.
+- Orchestration through seven persistent, user-visible Finday social-media Codex
+  tasks with direct cross-task messaging; side-chat subagents are not used.
 - Conservative self-improvement of memory, skills, and soul.
 - Native interaction across Codex tasks, including new tasks when explicitly
   requested by the user.
@@ -24,8 +24,8 @@
 - `AGENTS.md` is the Codex-loaded project entry point.
 - `.agents/skills/` contains repository-scoped Codex skills.
 - `.hermes/` contains soul, memory, evolution history, and task registry.
-- `.hermes/team/` contains the standing task roster, peer protocol, specialist
-  profiles, role-owned memory, and role-owned evolution logs.
+- `.hermes/social/` contains the standing Finday social roster, peer protocol,
+  specialist profiles, role-owned memory, and role-owned evolution logs.
 
 ## Capability boundary
 

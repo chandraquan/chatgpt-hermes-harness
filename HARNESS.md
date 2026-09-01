@@ -15,7 +15,7 @@ AGENTS.md                         always-loaded project contract
 .hermes/SOUL.md                   personality and collaboration style
 .hermes/memory/                   durable, layered project memory
 .hermes/threads/REGISTRY.md       compact cross-task coordination index
-.hermes/team/                     team roster, protocol, roles, and role state
+.hermes/social/                   Finday social team, role state, and protocol
 .hermes/EVOLUTION.md              audited self-improvement history
 .agents/skills/                   Codex-discoverable repository skills
 ```
@@ -46,8 +46,9 @@ They can be audited and versioned, but they are not deterministic lifecycle hook
 - Skills: reusable procedures discovered by Codex from `.agents/skills`.
 - Memory: curated file-backed facts, decisions, preferences, and lessons across
   project tasks, separate from native Codex memories.
-- Orchestration: six persistent specialist tasks with native direct task messages,
-  selective dispatch, bounded conflict resolution, and Orchestrator synthesis.
+- Orchestration: seven persistent Finday social-media tasks with native direct
+  task messages, selective dispatch, bounded conflict resolution, and SM
+  Orchestrator synthesis.
 - Self-improvement: conservative, logged in-task updates to memory, skills, and
   soul—not unattended background learning.
 - Task coordination: native Codex task creation, reading, messaging, waiting,
@@ -70,21 +71,31 @@ Useful requests include:
 - “Review what the other task accomplished and continue from there.”
 - “Refine your soul based on my last three corrections.”
 
-## Standing team
+## Finday social-media team
 
-The current primary task is the Orchestrator. The persistent specialist tasks are
-Researcher, Analyst, Architect, Executor, Reviewer, and Verifier. Every specialist
-uses `gpt-5.6-luna` with reasoning effort `high` and reads its task ID and peers
-from `.hermes/team/ROSTER.md`.
+The social namespace adapts exactly seven authored profiles: `smorchestrator`,
+`smstrategist`, `smplanner`, `smproducer`, `smreviewer`, `smpublisher`, and
+`smanalyst`. Their persistent Codex tasks all use `gpt-5.6-luna` with reasoning
+effort `high`.
 
-Specialists communicate directly using native task messages. These messages are
+The compatibility manifest accounts for 67 logical source skills: 60 common plus
+4 Orchestrator, 2 Planner, and 1 Producer capabilities. Each is classified as
+native, adapted, or unavailable and has an explicit route and test ID. This is
+complete capability accounting, not a claim that Codex implements independent
+Hermes profile homes, gateways, cron databases, provider credentials, Kanban,
+or shadow rollback.
+
+Only authored, non-secret behavior was migrated. Authentication material, raw
+memory, messages, sessions, databases, logs, caches, locks, process state, and
+runtime task IDs are excluded from Git.
+
+Social peers communicate directly using native task messages. These messages are
 user-visible and auditable; they are not hidden chain-of-thought. A task is not a
 background daemon: it becomes active when a message starts or resumes a turn.
 
-Because this local project is not a Git repository and all tasks share its folder,
-only Executor owns product edits. Other roles are read-only for product files.
-Each role may evolve only its own harness namespace; the Orchestrator remains the
-single writer for shared contracts and registries.
+All social roles are read-only for ordinary project files unless the user assigns
+bounded ownership. Each role may evolve only its own harness namespace; the SM
+Orchestrator owns shared social contracts and registries.
 
 ## Evolution policy
 

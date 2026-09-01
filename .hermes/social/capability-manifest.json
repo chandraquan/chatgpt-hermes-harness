@@ -1,0 +1,1249 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-09-01",
+  "accounting": {
+    "profiles": 7,
+    "common_logical": 60,
+    "common_physical_copies": 420,
+    "unique_logical": 7,
+    "total_logical": 67
+  },
+  "classification_contract": {
+    "NATIVE": "Direct callable Codex or app primitive verified on this host.",
+    "ADAPTED": "Observable equivalent composed from native tools and project-local instructions.",
+    "UNAVAILABLE": "No truthful current-host equivalent; fail closed and retain a negative test."
+  },
+  "capabilities": [
+    {
+      "id": "C001",
+      "name": "apple-notes",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "UNAVAILABLE",
+      "route": "negative:macos-only",
+      "test_id": "CAP-001",
+      "status": "verified",
+      "note": "Apple Notes CLI is absent on Windows."
+    },
+    {
+      "id": "C002",
+      "name": "apple-reminders",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "UNAVAILABLE",
+      "route": "negative:macos-only",
+      "test_id": "CAP-002",
+      "status": "verified",
+      "note": "Apple Reminders CLI is absent on Windows."
+    },
+    {
+      "id": "C003",
+      "name": "findmy",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "UNAVAILABLE",
+      "route": "negative:macos-only",
+      "test_id": "CAP-003",
+      "status": "verified",
+      "note": "Find My application and CLI are absent on Windows."
+    },
+    {
+      "id": "C004",
+      "name": "imessage",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "UNAVAILABLE",
+      "route": "negative:macos-only",
+      "test_id": "CAP-004",
+      "status": "verified",
+      "note": "iMessage CLI is absent on Windows."
+    },
+    {
+      "id": "C005",
+      "name": "claude-code",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "UNAVAILABLE",
+      "route": "policy:no-external-agent-delegation",
+      "test_id": "CAP-005",
+      "status": "verified",
+      "note": "CLI presence does not satisfy this project's native-task-only team protocol."
+    },
+    {
+      "id": "C006",
+      "name": "codex",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "NATIVE",
+      "route": "codex:task-tools",
+      "test_id": "CAP-006",
+      "status": "verified",
+      "note": "Native Codex tasks provide persistent task execution and coordination."
+    },
+    {
+      "id": "C007",
+      "name": "computer-use",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "NATIVE",
+      "route": "skill:computer-use:computer-use",
+      "test_id": "CAP-007",
+      "status": "verified",
+      "note": "Callable Codex computer-use skill when the host exposes it."
+    },
+    {
+      "id": "C008",
+      "name": "hermes-agent",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "project:AGENTS.md+HARNESS.md",
+      "test_id": "CAP-008",
+      "status": "verified",
+      "note": "Project harness behavior only; no Hermes runtime management."
+    },
+    {
+      "id": "C009",
+      "name": "opencode",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "UNAVAILABLE",
+      "route": "negative:command-absent",
+      "test_id": "CAP-009",
+      "status": "verified",
+      "note": "OpenCode CLI is absent."
+    },
+    {
+      "id": "C010",
+      "name": "architecture-diagram",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "skill:visualize:visualize",
+      "test_id": "CAP-010",
+      "status": "verified",
+      "note": "Use Codex visualization or project-local SVG/HTML artifacts."
+    },
+    {
+      "id": "C011",
+      "name": "ascii-video",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:exec+ffmpeg",
+      "test_id": "CAP-011",
+      "status": "verified",
+      "note": "FFmpeg is present; source-specific helper behavior is conditional."
+    },
+    {
+      "id": "C012",
+      "name": "baoyu-infographic",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "skill:visualize:visualize",
+      "test_id": "CAP-012",
+      "status": "verified",
+      "note": "Use native visualization/image tools with source layout intent."
+    },
+    {
+      "id": "C013",
+      "name": "claude-design",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:files+browser",
+      "test_id": "CAP-013",
+      "status": "verified",
+      "note": "Create and verify a one-off HTML artifact without Claude runtime."
+    },
+    {
+      "id": "C014",
+      "name": "design-md",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:files+validator",
+      "test_id": "CAP-014",
+      "status": "verified",
+      "note": "Author and validate DESIGN.md as project files."
+    },
+    {
+      "id": "C015",
+      "name": "humanizer",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "model:language-editing",
+      "test_id": "CAP-015",
+      "status": "verified",
+      "note": "Apply the authored editing criteria through the current model."
+    },
+    {
+      "id": "C016",
+      "name": "manim-video",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:exec:conditional",
+      "test_id": "CAP-016",
+      "status": "verified",
+      "note": "Procedure is preserved; Manim dependency must be probed per work order."
+    },
+    {
+      "id": "C017",
+      "name": "p5js",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:node+browser",
+      "test_id": "CAP-017",
+      "status": "verified",
+      "note": "Node/browser can create and verify p5.js artifacts."
+    },
+    {
+      "id": "C018",
+      "name": "popular-web-designs",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:files+browser",
+      "test_id": "CAP-018",
+      "status": "verified",
+      "note": "Reproduce design-system patterns with browser verification."
+    },
+    {
+      "id": "C019",
+      "name": "songwriting-and-ai-music",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "model:language+media-conditional",
+      "test_id": "CAP-019",
+      "status": "verified",
+      "note": "Songwriting is available; music-provider execution requires an exposed tool."
+    },
+    {
+      "id": "C020",
+      "name": "sdlc-review",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "codex:task-review-verify",
+      "test_id": "CAP-020",
+      "status": "verified",
+      "note": "Route review and verification through native Codex tasks."
+    },
+    {
+      "id": "C021",
+      "name": "email-inbox-triage",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "connector:conditional",
+      "test_id": "CAP-021",
+      "status": "verified",
+      "note": "Requires an exposed authenticated mail connector or authorized browser session."
+    },
+    {
+      "id": "C022",
+      "name": "himalaya",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "UNAVAILABLE",
+      "route": "negative:command-absent",
+      "test_id": "CAP-022",
+      "status": "verified",
+      "note": "Himalaya CLI is absent."
+    },
+    {
+      "id": "C023",
+      "name": "gif-search",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:web+download",
+      "test_id": "CAP-023",
+      "status": "verified",
+      "note": "Use web search/download subject to source and rights checks."
+    },
+    {
+      "id": "C024",
+      "name": "songsee",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:exec:conditional",
+      "test_id": "CAP-024",
+      "status": "verified",
+      "note": "Audio analysis requires a proven local dependency at invocation."
+    },
+    {
+      "id": "C025",
+      "name": "youtube-content",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:web+transcript",
+      "test_id": "CAP-025",
+      "status": "verified",
+      "note": "Use available web/transcript sources and cite them."
+    },
+    {
+      "id": "C026",
+      "name": "obsidian",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:files:scoped",
+      "test_id": "CAP-026",
+      "status": "verified",
+      "note": "Operate only on a user-scoped local vault; Obsidian CLI is absent."
+    },
+    {
+      "id": "C027",
+      "name": "airtable",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "UNAVAILABLE",
+      "route": "negative:plugin-not-installed",
+      "test_id": "CAP-027",
+      "status": "verified",
+      "note": "Airtable plugin/connector is not installed in this host."
+    },
+    {
+      "id": "C028",
+      "name": "box",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "UNAVAILABLE",
+      "route": "negative:plugin-not-installed",
+      "test_id": "CAP-028",
+      "status": "verified",
+      "note": "Box plugin/connector is not installed in this host."
+    },
+    {
+      "id": "C029",
+      "name": "chief-social-media",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "project:.hermes/social/PROTOCOL.md",
+      "test_id": "CAP-029",
+      "status": "verified",
+      "note": "Role-aware governed social workflow."
+    },
+    {
+      "id": "C030",
+      "name": "document-to-action-items",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "skill:documents:documents",
+      "test_id": "CAP-030",
+      "status": "verified",
+      "note": "Extract cited actions with the bundled document surface."
+    },
+    {
+      "id": "C031",
+      "name": "docx",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "NATIVE",
+      "route": "skill:documents:documents",
+      "test_id": "CAP-031",
+      "status": "verified",
+      "note": "Bundled Codex document skill is callable."
+    },
+    {
+      "id": "C032",
+      "name": "finday-social-governance",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "project:.hermes/social/PROTOCOL.md+role-overlays",
+      "test_id": "CAP-032",
+      "status": "verified",
+      "note": "Exact-version role governance is project-local and instruction-driven."
+    },
+    {
+      "id": "C033",
+      "name": "google-workspace",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "connector:google-drive-suite",
+      "test_id": "CAP-033",
+      "status": "verified",
+      "note": "Drive/Docs/Sheets/Slides are exposed; Gmail/Calendar remain conditional."
+    },
+    {
+      "id": "C034",
+      "name": "maps",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:web+http",
+      "test_id": "CAP-034",
+      "status": "verified",
+      "note": "Geocoding and routing use current public web services when allowed."
+    },
+    {
+      "id": "C035",
+      "name": "meeting-action-items",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "skill:documents:documents",
+      "test_id": "CAP-035",
+      "status": "verified",
+      "note": "Turn supplied or connected meeting material into cited actions."
+    },
+    {
+      "id": "C036",
+      "name": "notion",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "NATIVE",
+      "route": "skill:notion:notion-knowledge-capture",
+      "test_id": "CAP-036",
+      "status": "verified",
+      "note": "Installed Notion connector skills are callable when authenticated."
+    },
+    {
+      "id": "C037",
+      "name": "pdf",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "NATIVE",
+      "route": "skill:pdf:pdf",
+      "test_id": "CAP-037",
+      "status": "verified",
+      "note": "Bundled Codex PDF skill is callable."
+    },
+    {
+      "id": "C038",
+      "name": "powerpoint",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "NATIVE",
+      "route": "skill:presentations:Presentations",
+      "test_id": "CAP-038",
+      "status": "verified",
+      "note": "Bundled Codex presentations skill is callable."
+    },
+    {
+      "id": "C039",
+      "name": "product-price-monitor",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:web+automation_update",
+      "test_id": "CAP-039",
+      "status": "verified",
+      "note": "Use current web evidence and native Codex automation only when requested."
+    },
+    {
+      "id": "C040",
+      "name": "teams-meeting-pipeline",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "UNAVAILABLE",
+      "route": "negative:connector-not-exposed",
+      "test_id": "CAP-040",
+      "status": "verified",
+      "note": "No authenticated Microsoft Teams/Graph connector is exposed."
+    },
+    {
+      "id": "C041",
+      "name": "weekly-review-planning",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "model:planning+project-memory",
+      "test_id": "CAP-041",
+      "status": "verified",
+      "note": "Use task evidence and project-local memory; no Hermes scheduler implied."
+    },
+    {
+      "id": "C042",
+      "name": "xlsx",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "NATIVE",
+      "route": "skill:spreadsheets:Spreadsheets",
+      "test_id": "CAP-042",
+      "status": "verified",
+      "note": "Bundled Codex spreadsheet skill is callable."
+    },
+    {
+      "id": "C043",
+      "name": "arxiv",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:web:primary-source",
+      "test_id": "CAP-043",
+      "status": "verified",
+      "note": "Search and cite arXiv through web/HTTP."
+    },
+    {
+      "id": "C044",
+      "name": "competitor-news-monitor",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:web+automation_update",
+      "test_id": "CAP-044",
+      "status": "verified",
+      "note": "Research with citations; recurrence requires an explicit native automation."
+    },
+    {
+      "id": "C045",
+      "name": "grounded-citations",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:web",
+      "test_id": "CAP-045",
+      "status": "verified",
+      "note": "Use source-linked evidence under Codex citation rules."
+    },
+    {
+      "id": "C046",
+      "name": "llm-wiki",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:files+search",
+      "test_id": "CAP-046",
+      "status": "verified",
+      "note": "Build/query an interlinked project-local Markdown knowledge base."
+    },
+    {
+      "id": "C047",
+      "name": "xurl",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "UNAVAILABLE",
+      "route": "negative:command-absent",
+      "test_id": "CAP-047",
+      "status": "verified",
+      "note": "xurl CLI and an authenticated X connector are absent."
+    },
+    {
+      "id": "C048",
+      "name": "codebase-inspection",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:rg+exec",
+      "test_id": "CAP-048",
+      "status": "verified",
+      "note": "Use repository search and language/line-count tooling."
+    },
+    {
+      "id": "C049",
+      "name": "dogfood",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "skill:browser:control-in-app-browser",
+      "test_id": "CAP-049",
+      "status": "verified",
+      "note": "Use browser evidence for scoped exploratory QA."
+    },
+    {
+      "id": "C050",
+      "name": "github",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:git+project-local-ssh",
+      "test_id": "CAP-050",
+      "status": "verified",
+      "note": "Authenticated repository Git fetch/push is verified through the project-local SSH remote; GitHub CLI/API operations fail closed until a callable authenticated surface exists."
+    },
+    {
+      "id": "C051",
+      "name": "hermes-agent-skill-authoring",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "skill:skill-creator",
+      "test_id": "CAP-051",
+      "status": "verified",
+      "note": "Use Codex skill-creator and project-local skill rules."
+    },
+    {
+      "id": "C052",
+      "name": "inspecting-hermes-desktop-dom",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "skill:browser:control-in-app-browser",
+      "test_id": "CAP-052",
+      "status": "verified",
+      "note": "Inspect only an authorized visible app/browser surface; no Hermes runtime assumption."
+    },
+    {
+      "id": "C053",
+      "name": "node-inspect-debugger",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:node+cdp",
+      "test_id": "CAP-053",
+      "status": "verified",
+      "note": "Node is available; debugger attachment is scoped and conditional."
+    },
+    {
+      "id": "C054",
+      "name": "python-debugpy",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:python:conditional",
+      "test_id": "CAP-054",
+      "status": "verified",
+      "note": "Bundled Python exists; debugpy must be probed before use."
+    },
+    {
+      "id": "C055",
+      "name": "requesting-code-review",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "codex:Reviewer-task",
+      "test_id": "CAP-055",
+      "status": "verified",
+      "note": "Use the persistent Reviewer task and actual diff evidence."
+    },
+    {
+      "id": "C056",
+      "name": "simplify-code",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "codex:selective-task-routing",
+      "test_id": "CAP-056",
+      "status": "verified",
+      "note": "Use bounded native tasks; never recreate hidden four-agent side chats."
+    },
+    {
+      "id": "C057",
+      "name": "spike",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:isolated-project-files",
+      "test_id": "CAP-057",
+      "status": "verified",
+      "note": "Run bounded throwaway experiments with explicit cleanup/retention."
+    },
+    {
+      "id": "C058",
+      "name": "systematic-debugging",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "model:diagnostic-workflow",
+      "test_id": "CAP-058",
+      "status": "verified",
+      "note": "Preserve evidence-first debugging phases."
+    },
+    {
+      "id": "C059",
+      "name": "test-driven-development",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:test-runner+apply_patch",
+      "test_id": "CAP-059",
+      "status": "verified",
+      "note": "Preserve RED-GREEN-REFACTOR with observable tests."
+    },
+    {
+      "id": "C060",
+      "name": "blocked-page-recovery",
+      "source_kind": "common",
+      "source_profiles": [
+        "smanalyst",
+        "smorchestrator",
+        "smplanner",
+        "smproducer",
+        "smpublisher",
+        "smreviewer",
+        "smstrategist"
+      ],
+      "class": "ADAPTED",
+      "route": "tool:web+browser",
+      "test_id": "CAP-060",
+      "status": "verified",
+      "note": "Escalate through compliant web/browser recovery paths."
+    },
+    {
+      "id": "C061",
+      "name": "orchestrator-bot",
+      "source_kind": "unique",
+      "source_profiles": [
+        "smorchestrator"
+      ],
+      "class": "ADAPTED",
+      "route": "skill:orchestrator-bot",
+      "test_id": "CAP-061",
+      "status": "verified",
+      "note": "Coordinate governed Finday delivery through native Codex tasks."
+    },
+    {
+      "id": "C062",
+      "name": "finday-social-production",
+      "source_kind": "unique",
+      "source_profiles": [
+        "smorchestrator"
+      ],
+      "class": "ADAPTED",
+      "route": "skill:finday-social-production",
+      "test_id": "CAP-062",
+      "status": "verified",
+      "note": "Adapt the audited plan-to-production packet and first-frame gates."
+    },
+    {
+      "id": "C063",
+      "name": "social-content-calendar-workbooks",
+      "source_kind": "unique",
+      "source_profiles": [
+        "smorchestrator"
+      ],
+      "class": "ADAPTED",
+      "route": "skill:social-content-calendar-workbooks",
+      "test_id": "CAP-063",
+      "status": "verified",
+      "note": "Adapt Excel social calendar planning and verification."
+    },
+    {
+      "id": "C064",
+      "name": "social-content-quality-gates",
+      "source_kind": "unique",
+      "source_profiles": [
+        "smorchestrator"
+      ],
+      "class": "ADAPTED",
+      "route": "skill:social-content-quality-gates",
+      "test_id": "CAP-064",
+      "status": "verified",
+      "note": "Adapt conceptual, artifact, approval, publication, and verification gates."
+    },
+    {
+      "id": "C065",
+      "name": "finday-social-plan-artifact-validation",
+      "source_kind": "unique",
+      "source_profiles": [
+        "smplanner"
+      ],
+      "class": "ADAPTED",
+      "route": "skill:finday-social-plan-artifact-validation",
+      "test_id": "CAP-065",
+      "status": "verified",
+      "note": "Adapt exact-version plan and artifact reconciliation."
+    },
+    {
+      "id": "C066",
+      "name": "rencana-konten-iklan",
+      "source_kind": "unique",
+      "source_profiles": [
+        "smplanner"
+      ],
+      "class": "ADAPTED",
+      "route": "skill:rencana-konten-iklan",
+      "test_id": "CAP-066",
+      "status": "verified",
+      "note": "Adapt detailed Finday advertising content-plan procedure."
+    },
+    {
+      "id": "C067",
+      "name": "finday-native-raster-production",
+      "source_kind": "unique",
+      "source_profiles": [
+        "smproducer"
+      ],
+      "class": "ADAPTED",
+      "route": "skill:finday-native-raster-production",
+      "test_id": "CAP-067",
+      "status": "verified",
+      "note": "Adapt native GPT Image raster generation with fail-closed identity gates."
+    }
+  ]
+}

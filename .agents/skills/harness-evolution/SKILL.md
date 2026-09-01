@@ -39,19 +39,20 @@ by evidence. For memory, follow the `project-memory` skill.
 
 ## Team ownership
 
-A registered specialist may autonomously evolve only its own files:
+A registered social specialist may autonomously evolve only its own files:
 
-- `.hermes/team/roles/<role>.md`;
-- `.hermes/team/memory/<role>.md`;
-- `.hermes/team/evolution/<role>.md`;
-- `.agents/skills/hermes-<role>/`.
+- `.hermes/social/roles/<role>.md`;
+- `.hermes/social/memory/<role>.md`;
+- `.hermes/social/evolution/<role>.md`;
+- `.agents/skills/hermes-sm-<role>/`.
 
 The role must have explicit feedback, a verified reusable lesson, or a diagnosed
 repeatable failure. It must append evidence, validation, and rollback guidance to
-its role evolution log. Specialists propose shared changes to the Orchestrator;
-they never edit another role, the shared protocol, roster, soul, or shared memory.
-Only Executor may modify product files, and that authority does not allow Executor
-to alter other roles' harness state.
+its role evolution log. Specialists propose shared changes to the SM Orchestrator;
+they never edit another role, the shared social protocol, roster, soul, or shared
+memory. No social role may modify ordinary product files without explicit bounded
+user authority, and that authority does not allow changes to another role's
+harness state.
 
 ## Audit and validate
 

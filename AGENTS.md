@@ -19,9 +19,10 @@ At the start of every task in this project, before substantive work:
    relevant to the current request.
 4. Read `.hermes/threads/REGISTRY.md` when the request mentions another task,
    prior work, delegation, handoff, or parallel execution.
-5. When the task is a registered Hermes team task, read
-   `.hermes/team/ROSTER.md`, `.hermes/team/PROTOCOL.md`, and only the role profile
-   and role memory assigned to that task.
+5. When the task is registered in `.hermes/social/ROSTER.md`, also read
+   `.hermes/social/PROFILE_MAP.md`, `.hermes/social/PROTOCOL.md`, the task's exact
+   social role file and role memory, and `capability-manifest.json`. Never load a
+   different social role's memory as your own.
 6. Inspect the repository skills advertised from `.agents/skills` and load every
    skill whose trigger matches the request.
 
@@ -55,35 +56,49 @@ project's file-backed memory.
 
 ## Orchestration
 
-Use the `hermes-orchestration` skill for work with two or more genuinely
-independent lanes, significant exploration, or a long implement/review/verify
-loop. This project's standing team uses user-visible Codex tasks, never side-chat
-subagents.
+For work requiring more than one Finday social-media role, use the smallest useful
+set of registered social tasks and native Codex task messages; never use side-chat
+subagents. The SM Orchestrator selects roles, integrates results, and brings human
+decisions directly to the user. Peers communicate directly for routine work; after
+two unresolved challenge rounds, they send evidence and options to the SM
+Orchestrator. Never claim a task was contacted or completed work without native
+task-tool evidence.
 
-- The current primary task is the Orchestrator. It selects only the specialist
-  roles that materially improve the requested work.
-- The six core roles are Researcher, Analyst, Architect, Executor, Reviewer, and
-  Verifier. Resolve their native task IDs from `.hermes/team/ROSTER.md`.
-- Dispatch and peer communication use native Codex task messages with the
-  `HERMES-MSG v1` envelope defined in `.hermes/team/PROTOCOL.md`.
-- A specialist may contact another specialist directly. Do not route ordinary
-  peer communication through the Orchestrator.
-- Questions requiring a human decision go to the Orchestrator, which presents one
-  consolidated question to the user.
-- After two peer disagreement rounds, send the evidence and options to the
-  Orchestrator for the final integration decision.
-- Never claim a specialist was contacted or completed work without native task
-  tool evidence.
+## Finday social-media team
+
+The project also contains seven persistent social-domain tasks adapted from the
+authored Hermes profiles: SM Orchestrator, Strategist, Planner, Producer, Reviewer,
+Publisher, and Analyst. Their exact titles and native IDs are in the ignored
+`.hermes/social/ROSTER.md`; the committed role mapping is in
+`.hermes/social/PROFILE_MAP.md`.
+
+- Use `hermes-capability-router` whenever a request invokes or audits a source
+  Hermes capability. Every logical capability must resolve to a manifest row.
+- `NATIVE` means a callable current-host Codex/app primitive; `ADAPTED` means an
+  observable project-local equivalent; `UNAVAILABLE` must fail closed.
+- The SM Orchestrator coordinates social-domain work, materializes canonical
+  social state, and owns shared social coordination policy.
+- Social peers communicate directly using native task messages and the existing
+  `HERMES-MSG v1` envelope. Human decisions, external authorization, degraded
+  capability, final integration, and unresolved two-round conflicts go to the SM
+  Orchestrator, which asks the user when needed.
+- Preserve exact campaign/content/version identity and the separate strategy, QA,
+  business, publishing, read-back, and measurement gates in the social protocol.
+- External publishing or scheduling requires explicit scoped authority plus a
+  callable authenticated connector. A role, skill, calendar, or approval-like
+  phrase never creates that authority.
+
+These tasks share one project directory. Never describe them as isolated
+`HERMES_HOME` profiles or claim Hermes gateway, cron-store, Kanban, credential,
+session-database, plugin, or rollback semantics.
 
 ## Codex tasks and threads
 
 Use the `thread-coordinator` skill when work crosses Codex tasks.
 
-- Do not use subagents for Hermes team work. The user explicitly authorized the
-  standing core tasks and bounded surge tasks described in the team protocol.
-- Reuse the registered core task for its role. Create a surge task only when a
-  missing specialty materially blocks or improves a work order, and enforce the
-  per-role limit in the protocol.
+- Reuse the registered social task for its role. Create a social surge task only
+  when a missing specialty materially blocks or improves a social work order, and
+  enforce the social protocol's limit.
 - When another task is in scope, use Codex task tools to list, read, message, wait,
   fork, hand off, rename, pin, archive, or navigate as appropriate.
 - Task operations depend on the tools available in the current Codex host. If a
@@ -94,16 +109,14 @@ Use the `thread-coordinator` skill when work crosses Codex tasks.
 - Record durable cross-task coordination in `.hermes/threads/REGISTRY.md` without
   copying full transcripts.
 
-## Team write ownership
+## Social-team write ownership
 
-- Only Executor may change product or ordinary project deliverable files.
-- Researcher, Analyst, Architect, Reviewer, and Verifier are read-only for product
-  files. They return evidence, plans, findings, and verification through native
-  task messages.
-- Each specialist may update only its own role profile, specialist skill, role
-  memory, and role evolution log when the evidence threshold is met.
-- Only the Orchestrator may edit shared harness policy, soul, shared memory,
-  `.hermes/team/ROSTER.md`, `.hermes/team/PROTOCOL.md`, and the task registry.
+- Social roles are read-only for product and ordinary deliverable files. Each may
+  edit only its matching `.hermes/social/roles`, `memory`, `evolution`, and
+  `hermes-sm-*` specialist skill paths. The SM Orchestrator owns social shared
+  contracts, manifests, validators, adapted shared skills, roster, and registry.
+- No task owns ordinary project-file edits unless the user explicitly assigns that
+  ownership for a bounded work order.
 - Tool caches and test artifacts are allowed when verification requires them, but
   they do not grant ownership of source or deliverable files.
 
@@ -121,9 +134,9 @@ If no durable improvement exists, make no harness edit. If one does, use the
 changes are normal project changes: inspect first, edit minimally, validate, and
 report them. Never self-modify merely to appear active.
 
-For a registered specialist, role-local improvement goes to its owned profile,
-skill, memory, and evolution log. Shared changes must be proposed to the
-Orchestrator rather than written by the specialist.
+For a registered social specialist, role-local improvement goes to its owned
+profile, skill, memory, and evolution log. Shared changes must be proposed to the
+SM Orchestrator rather than written by the specialist.
 
 ## Work discipline
 

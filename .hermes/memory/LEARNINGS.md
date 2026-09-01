@@ -21,18 +21,6 @@
   evidence before claiming that memory, delegation, task coordination, or
   self-improvement occurred.
 
-## 2026-09-01 — Native task messages can form a decentralized project team
-
-- Evidence: the six registered specialist tasks successfully sent direct native
-  messages through a full peer ring, conducted a two-round Researcher/Analyst
-  disagreement, and completed an Architect/Executor/Reviewer/Verifier simulation.
-- Lesson: persistent user-visible Codex tasks can coordinate directly when every
-  task receives an exact address book and a compact message contract. The roster
-  remains an address index; successful task-tool results are the operational proof.
-- Reuse: bootstrap IDs before distributed work, use stable work/message IDs, keep
-  shared files single-writer, and fail visibly rather than simulating a native
-  message when task tools are unavailable.
-
 ## 2026-09-01 — Preserve network payload truth in Glints exports
 
 - Evidence: live inspection of `members[].contact` in the Glints `channel` response showed only `type` and a server-masked `number` value (`+62****`).

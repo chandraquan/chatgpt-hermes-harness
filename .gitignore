@@ -4,8 +4,9 @@ outputs/
 *.inspect.ndjson
 
 # Machine-local Codex task addresses and live task state
-.hermes/team/ROSTER.md
 .hermes/threads/REGISTRY.md
+.hermes/social/ROSTER.md
+.hermes/social/acceptance/
 
 # Local secrets and environment overrides
 .env

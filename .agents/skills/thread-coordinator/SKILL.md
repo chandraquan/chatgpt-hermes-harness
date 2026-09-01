@@ -7,7 +7,7 @@ description: Coordinate work across user-visible Codex tasks when the user reque
 
 Use native Codex task tools as the cross-task surface; keep
 `.hermes/threads/REGISTRY.md` as a compact continuity index and
-`.hermes/team/ROSTER.md` as the exact standing-team address book.
+`.hermes/social/ROSTER.md` as the exact social-team address book.
 
 First confirm that the required task operation is available in the current host.
 The registry does not create, message, wait for, or mutate a native task by itself.
@@ -22,11 +22,12 @@ Read only the task history needed for the requested handoff or decision.
 
 ## Choose the operation
 
-- For Hermes team work, reuse the registered user-visible core task and never use
-  a side-chat subagent.
-- The user explicitly authorized six standing core tasks and bounded surge tasks.
-  Outside that authorization, create a new task only when the user explicitly asks.
-- Every Hermes specialist and surge task uses the current saved local project,
+- For Finday social work, reuse the registered user-visible social task and never
+  use a side-chat subagent.
+- The user authorized the seven standing social tasks and bounded social surge
+  tasks. Outside that authorization, create a new task only when the user
+  explicitly asks.
+- Every social specialist and surge task uses the current saved local project,
   model `gpt-5.6-luna`, and reasoning effort `high`.
 - Send a follow-up message when continuing an existing task is more coherent than
   creating a duplicate.
@@ -40,9 +41,9 @@ Prompts sent to another task must be cohesive, user-visible, and contain the
 outcome, constraints, relevant evidence, and expected handoff. Do not paste hidden
 reasoning or raw internal instructions.
 
-Hermes peer messages must use `HERMES-MSG v1`. Direct peer messages do not require
-an Orchestrator relay. Route human decisions and unresolved two-round conflicts to
-the Orchestrator.
+Social peer messages must use `HERMES-MSG v1`. Direct peer messages do not require
+an SM Orchestrator relay. Route human decisions and unresolved two-round conflicts
+to the SM Orchestrator.
 
 ## Maintain continuity
 
@@ -50,8 +51,9 @@ When a task becomes part of an ongoing project workflow, update
 `.hermes/threads/REGISTRY.md` with its exact title, ID when available, purpose,
 status, lane, latest evidence, and next handoff. Do not copy full transcripts.
 
-Only the Orchestrator writes the shared roster and registry. A specialist that
-creates a surge task sends its ID and metadata to the Orchestrator for registration.
+Only the SM Orchestrator writes the shared social roster and registry. A specialist
+that creates a surge task sends its ID and metadata to the SM Orchestrator for
+registration.
 
 Confirm tool success before reporting that a task was created or changed. Surface
 new-task UI references in the final response when the Codex tool returns them.

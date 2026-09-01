@@ -39,30 +39,6 @@ entry.
 - Rollback: revert this entry and the matching capability-boundary paragraphs, but
   doing so would restore misleading guarantees.
 
-## 2026-09-01 — Persistent decentralized Codex task team
-
-- Component: orchestration contract, task coordinator, team protocol, specialist
-  roles and skills, role-owned memory/evolution, shared roster, and registry.
-- Trigger: explicit user request to replace side-chat delegation with a persistent
-  Orchestrator plus Researcher, Analyst, Architect, Executor, Reviewer, and
-  Verifier tasks that communicate directly across Codex tasks.
-- Evidence: six native local-project tasks were created with `gpt-5.6-luna` and
-  effort `high`; every task acknowledged its exact roster and native task tools;
-  the complete peer ring reached the Orchestrator; Researcher and Analyst completed
-  two direct conflict rounds and escalated one blocker; the read-only work-order
-  simulation returned a Verifier PASS.
-- Change: superseded subagent-first team policy with selective persistent-task
-  routing, `HERMES-MSG v1`, two-round conflict limits, Orchestrator human-decision
-  routing, Executor-only product writes, role-local autonomous evolution, and at
-  most two surge tasks per core role and work order.
-- Validation: all ten project skills passed the skill validator; team validation
-  passed with six unique registered task IDs; output metadata and NDJSON SHA-256
-  remained unchanged during the work simulation; relevant global Codex config
-  hashes were checked before and after.
-- Rollback: stop messaging and archive the six core tasks if desired, restore the
-  prior orchestration/task-coordinator instructions, and remove `.hermes/team/`
-  plus the six `hermes-<role>` skills. Do not modify global Codex configuration.
-
 ## 2026-09-01 — Extend Glints extractor with CV phone enrichment
 
 - Component: `.agents/skills/glints-job-applicant-extractor/SKILL.md`
@@ -77,3 +53,65 @@ entry.
   and no formula errors; skill validator passed before this extension.
 - Rollback: remove the `## CV phone enrichment` section from the skill; the
   network-only extraction behavior remains intact.
+
+## 2026-09-01 — Seven-profile Hermes social compatibility layer
+
+- Component: social task protocol, role identities, role memory/evolution,
+  capability router and manifest, seven adapted source skills, project bootstrap,
+  documentation, validation, runtime roster, and task registry.
+- Trigger: explicit user request to replicate every agent under the local Hermes
+  profile root and preserve its capabilities in the ChatGPT Codex way.
+- Evidence: read-only inventory found seven authored profiles, 60 common logical
+  skills, four Orchestrator-only skills, two Planner-only skills, one Producer-only
+  skill, role-specific governance variants, and zero cron execution rows. The
+  compatibility mapping classified runtime semantics as native, adapted, or
+  unavailable Codex surfaces.
+- Change: added seven Luna/high persistent social tasks, exact role behavior and
+  non-authorities, decentralized native task messaging, governed social lifecycle,
+  a 67-row compatibility manifest, fail-closed capability routing, sanitized
+  source boundaries, and project-only validation.
+- Safety: no Hermes installation/runtime call, global Codex edit, credential,
+  raw memory, message, session, database, log, cache, lock, temporary helper,
+  generated snapshot, or live task ID is committed.
+- Validation: direct native ring, seven role non-authority drills, C061-C067
+  capability dry-runs, source-aware 67-capability validator, all social skill
+  validators, independent Reviewer/Analyst audits, and sanitized Git-candidate
+  audit passed. GitHub push evidence is recorded in repository history.
+- Rollback: stop messaging or archive the seven social tasks, remove
+  `.hermes/social/` and the social/adapted project skills, and revert the matching
+  `AGENTS.md`, documentation, memory, and registry entries. Do not modify global
+  Codex or Hermes configuration.
+
+## 2026-09-01 — Finday social-media-only harness
+
+- Component: repository task topology, documentation, memory, skills, protocols,
+  role ownership, and live-task registry.
+- Trigger: explicit user instruction and confirmation to retain only the Finday
+  social-media team in this repository.
+- Change: removed non-social team artifacts and routes; made the social protocol
+  self-contained; designated the SM Orchestrator as the social integration and
+  user-decision route; retained fail-closed product-file and external-publication
+  boundaries.
+- Validation: recursive path/reference audit, skill validation, and repository
+  diff review after the change.
+- Rollback: restore the removed paths and matching references from the preceding
+  Git revision only if the user explicitly reauthorizes a broader team.
+
+## 2026-09-01 — Mandatory GPT Image 2 static/carousel raster route
+
+- Component: shared native-raster, production, plan validation, planning, and
+  orchestration procedures; SM Orchestrator role skill; durable decision record.
+- Trigger: explicit user instruction, relayed through the primary work order, to
+  supersede the adapted source's optional-resize detail for static and carousel
+  production.
+- Change: made native `gpt-image-2` the only static/carousel route; required a
+  Finday logo, approved avatar/model, and approved prompt; required a 4:5 request,
+  preserved raw output, direct raster resize without crop to `1080x1350`, and
+  raw/final path, dimension, operation, and checksum evidence. Shared consumers
+  now enforce the canonical procedure instead of creating alternate routes.
+- Source-parity note: this is an intentional user override of source-derived
+  behavior, recorded separately from claims of faithful source adaptation.
+- Validation: skill syntax validation and source-aware social validator after the
+  change; no product or external action.
+- Rollback: restore the prior shared procedures and decision entry only with
+  explicit user direction; doing so restores optional normalization behavior.
