@@ -35,3 +35,14 @@
   the contract and performs the corresponding file actions.
 - Cross-task operations require the relevant native tools in the current Codex
   host. Project files cannot emulate successful native operations.
+
+## Source control
+
+- Public repository: `https://github.com/chandraquan/chatgpt-hermes-harness`.
+- Git operations use the SSH remote
+  `git@github.com:chandraquan/chatgpt-hermes-harness.git` with a repository-local
+  SSH command bound to the `chandraquan` key; global Git/SSH configuration is not
+  modified by this project.
+- Generated exports, temporary files, live task IDs, and the machine-local task
+  registry are excluded from Git. Sanitized roster and registry templates are
+  committed instead.

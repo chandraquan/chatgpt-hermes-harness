@@ -48,3 +48,18 @@
 - Decision: reuse `.agents/skills/glints-job-applicant-extractor` for Glints applicant exports; treat the authenticated browser's paginated `channel` response bodies as the sole source of truth and preserve masked values exactly.
 - Rationale: the verified workflow captured four pages from network fetches and prevented local folder data or guessed phone digits from entering the workbook.
 - Evidence: explicit user request in the Glints extraction task and successful `quick_validate.py` validation of the new skill.
+
+## 2026-09-01 — Publish a sanitized public harness over project-local SSH
+
+- Status: active
+- Decision: use `chandraquan/chatgpt-hermes-harness` as the public GitHub remote,
+  preserve its initial commit, and push through an SSH command configured only in
+  this repository.
+- Rationale: the user explicitly requested GitHub deployment through SSH at the
+  project level; repository-local configuration avoids changing the default SSH
+  identity, which belongs to a different GitHub account.
+- Privacy boundary: ignore `.tmp/`, `outputs/`, live `ROSTER.md`, and live
+  `REGISTRY.md`; publish sanitized templates instead. Staged scans must contain no
+  runtime task IDs or credentials before push.
+- Evidence: SSH authenticated as `chandraquan`, commit `4bf538d` was pushed to
+  `origin/main`, and GitHub exposes the repository publicly.
